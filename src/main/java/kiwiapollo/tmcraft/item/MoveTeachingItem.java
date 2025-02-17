@@ -117,7 +117,7 @@ public abstract class MoveTeachingItem extends Item implements ElementalTypeItem
 
         teachPokemonMove(pokemon);
 
-        if (!player.isCreative()) {
+        if (!player.isCreative() && player.getRandom().nextBoolean()) {
             itemStack.decrement(1);
         }
 

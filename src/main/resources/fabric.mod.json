@@ -37,7 +37,7 @@
 		"minecraft": "1.21.1",
 		"java": ">=21",
 		"fabric-api": "*",
-		"cobblemon": "~1.6.0+1.21.1"
+		"cobblemon": ">=1.6.0+1.21.1"
 	},
 	"suggests": {
 		"another-mod": "*"
