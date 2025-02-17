@@ -78,6 +78,16 @@ public class TMMoveItem extends MoveTeachingItem {
                 .map(MoveTemplate::getName).toList()
                 .contains(move);
 
-        return isLevelUpMove || isTmMove;
+        boolean isEggMove = pokemon.getForm().getMoves()
+                .getEggMoves().stream()
+                .map(MoveTemplate::getName).toList()
+                .contains(move);
+
+        boolean isTutorMove = pokemon.getForm().getMoves()
+                .getTutorMoves().stream()
+                .map(MoveTemplate::getName).toList()
+                .contains(move);
+
+        return isLevelUpMove || isTmMove || isEggMove || isTutorMove;
     }
 }
