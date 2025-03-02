@@ -1,6 +1,7 @@
 package kiwiapollo.tmcraft;
 
 import kiwiapollo.tmcraft.block.ModBlocks;
+import kiwiapollo.tmcraft.command.GiveRandomTMCommand;
 import kiwiapollo.tmcraft.item.eggmove.EggMoveItemGroup;
 import kiwiapollo.tmcraft.item.eggmove.EggMoveItems;
 import kiwiapollo.tmcraft.item.misc.*;
@@ -15,6 +16,7 @@ import kiwiapollo.tmcraft.villager.MoveTutorTradeOffer;
 import kiwiapollo.tmcraft.villager.MoveTutorVillager;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -30,6 +32,8 @@ public class TMCraft implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> GiveRandomTMCommand.register(dispatcher));
+
 		Registry.register(Registries.VILLAGER_PROFESSION, Identifier.of(TMCraft.MOD_ID, MoveTutorVillager.PROFESSION_ID), MoveTutorVillager.PROFESSION);
 		new MoveTutorTradeOffer().register();
 
