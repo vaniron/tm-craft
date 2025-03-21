@@ -71,6 +71,8 @@ dependencies {
 	modImplementation("net.fabricmc:fabric-language-kotlin:${project.fabric_kotlin_version}")
 	compileOnly("net.luckperms:api:${project.luckperms_version}")
 	modImplementation("com.google.code.gson:gson:2.8.9")
+
+	modImplementation("maven.modrinth:wanteditems:1.1.4+1.6.1")
 }
 
 processResources {

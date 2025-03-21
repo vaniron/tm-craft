@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "wanteditems:bottle_cap_hp",
+    "wanteditems:bottle_cap_atk",
+    "wanteditems:bottle_cap_def",
+    "wanteditems:bottle_cap_spa",
+    "wanteditems:bottle_cap_spd",
+    "wanteditems:bottle_cap_spe"
+  ]
+}
